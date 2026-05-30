@@ -81,7 +81,6 @@ function calculateCalories() {
         return;
     }
 
-    // BMI calculation
     const bmi = weight / ((height / 100) * (height / 100));
     let bmiStatus = '';
     if (bmi < 18.5) bmiStatus = 'Underweight';
@@ -89,7 +88,6 @@ function calculateCalories() {
     else if (bmi < 30) bmiStatus = 'Overweight';
     else bmiStatus = 'Obesity';
 
-    // BMR calculation (Mifflin-St Jeor)
     let bmr = 0;
     if (gender === 'male') {
         bmr = 10 * weight + 6.25 * height - 5 * age + 5;
